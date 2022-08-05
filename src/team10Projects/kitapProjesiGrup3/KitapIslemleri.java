@@ -1,4 +1,4 @@
-package kitapProjesi;
+package team10Projects.kitapProjesiGrup3;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -80,8 +80,7 @@ public class KitapIslemleri {
         scan.nextLine();
         String bilgi= scan.nextLine().toLowerCase();
 
-        for (KitapBilgileri each:kitapList
-             ) {
+        for (KitapBilgileri each:kitapList) {
             if (bilgi.equals(each.kitapAdi)|| bilgi.equals(each.yazarAdi)){
                 System.out.println("aradığınız kitap : "+each.kitapNo+" "+each.kitapAdi+" "+each.yazarAdi+" "+each.kitapFiyati);
             }
@@ -105,8 +104,8 @@ public class KitapIslemleri {
 
     private static void kitapEkleme() {
         System.out.println("kitap adı giriniz : ");
+        scan.nextLine();//dummy hayalet komut
         String kitapAdi = scan.nextLine();
-        scan.nextLine();
         System.out.println("yazar adı giriniz : ");
         String yazarAdi = scan.nextLine();
         System.out.println("kitap fiyatı giriniz : ");
