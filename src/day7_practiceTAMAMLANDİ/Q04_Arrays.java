@@ -1,4 +1,4 @@
-package day7_practice;
+package day7_practiceTAMAMLANDİ;
 
 public class Q04_Arrays {
 

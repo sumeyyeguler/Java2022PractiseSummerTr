@@ -1,4 +1,4 @@
-package team10Projects.Constructor;
+package team10Projects.ConstructorDog;
 
     public class Dog {
         static int numTeeth = 8;

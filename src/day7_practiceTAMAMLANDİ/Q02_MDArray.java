@@ -1,6 +1,4 @@
-package day7_practice;
-
-import java.util.Arrays;
+package day7_practiceTAMAMLANDİ;
 
 public class Q02_MDArray {
 

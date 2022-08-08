@@ -21,7 +21,7 @@ public class Book {
     public Book(String kitapAdi, String yazarAdi, int kitapFiyati, int kitapNo) {
         //this.kitapAdi = kitapAdi;
         setKitapAdi(kitapAdi);
-        // this.yazarAdi = yazarAdi;
+         //this.yazarAdi = yazarAdi;
         setYazarAdi(yazarAdi);
         //this.kitapFiyati = kitapFiyati;
         setKitapFiyati(kitapFiyati);
@@ -33,7 +33,7 @@ public class Book {
     }
 
     public void setKitapAdi(String kitapAdi) {
-        this.kitapAdi = kitapAdi.substring(0, 1).toUpperCase() + kitapAdi.substring(1);
+        this.kitapAdi = kitapAdi.toUpperCase();
     }
 
     public String getYazarAdi() {

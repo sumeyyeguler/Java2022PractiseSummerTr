@@ -9,6 +9,7 @@ public class BookIslem {
     static Scanner scan = new Scanner(System.in); //tüm methodlardan ulaşabilmek için, class seviyesinde ve static olmalıdır.
     static int sayac2 = 1000; //static yapıyoruz çünkü her seferinde sayac güncellenecek
     static List<Book> kitapListesi = new ArrayList<>();
+
     //diamond içine--> data tipi yazılır.
     //oluşturacagın objelerin data tipi Book class bilgileridir, yani burada data tipimiz Book classı olmuş oluyor.
 
@@ -76,19 +77,12 @@ public class BookIslem {
         System.out.println("yazar adı giriniz : ");
         String yazarAdi = scan1.nextLine();
         System.out.println("kitap fiyatı giriniz : ");
-        int fiyat = 0;
+        int fiyat = scan1.nextInt();
 
-        try {
-            fiyat = scan1.nextInt();
-        } catch (Exception e) {
-            System.out.println("sadece sayı giriniz ! ");
-            kitapListesi.remove(kitapListesi.size());
-            kitapEk();
-        }
         int id = ++sayac2;
-
         Book kitap = new Book(kitapAdi, yazarAdi, fiyat, id);
         kitapListesi.add(kitap);
+
 
     }
 
@@ -99,7 +93,7 @@ public class BookIslem {
         try {
             int no = scan2.nextInt();
             if (no <= 1000 || no > 1000 + kitapListesi.size()) {
-                System.out.println("kitap numarası kürtüphanede bulunmamaktadır.");
+                System.out.println("kitap numarası kütüphanede bulunmamaktadır.");
             } else {
 
                 for (Book each : kitapListesi
@@ -118,13 +112,17 @@ public class BookIslem {
     }
 
     private static void bilgiIleAra() {
+        Scanner scan4 = new Scanner(System.in);
         System.out.println("kitap adı veya yazar adını giriniz : ");
-        String bilgi = scan.nextLine();
+        String bilgi = scan4.nextLine().toUpperCase();
 
-        for (Book each : kitapListesi
-        ) {
-            if (bilgi.equalsIgnoreCase(each.getKitapAdi()) || bilgi.equalsIgnoreCase(each.getYazarAdi())) {
+        for (Book each : kitapListesi) {
+            if ((bilgi.contains(each.getKitapAdi()) || bilgi.contains(each.getYazarAdi()))) {
+
                 System.out.println("aradığınız kitap : " + each);
+            } else {
+
+                System.out.println("aradğınız kitap kütüphanemizde bulunmamaktadır.");
             }
         }
 

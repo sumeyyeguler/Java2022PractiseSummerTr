@@ -1,4 +1,4 @@
-package day7_practice;
+package day7_practiceTAMAMLANDİ;
 
 import java.util.Arrays;
 import java.util.Scanner;
