@@ -8,8 +8,8 @@ public class Passenger {
     private String nameSurname;
     private int age = 0;
     private String city;
-    private String flightNo;//ucus no
-    private String gateHno;//kapı
+    private String flightNo;
+    private String gateHno;
     private String ticketType;
 
     public Passenger(String nameSurname, int age, String city, String ticketType) {
