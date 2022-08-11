@@ -25,6 +25,7 @@ public class Islem {
     void menuu() {
         Scanner scan = new Scanner(System.in);
         System.out.println("işlem seçiniz : ");
+        System.out.println("1 - Bakiye sorgula\n2 - para yatirma\n3 - para çekme\n4 - para gönderme\n5 - sifre değiştirme\n6 cikis");
         int islem = 0;
 
         try {
@@ -37,18 +38,23 @@ public class Islem {
         switch (islem) {
             case 1:
                 bakiye();
+                menuu();
                 break;
             case 2:
                 pYatir();
+                menuu();
                 break;
             case 3:
                 pCek();
+                menuu();
                 break;
             case 4:
                 pGonder();
+                menuu();
                 break;
             case 5:
                 sifreDegistr();
+                menuu();
                 break;
             case 6:
                 cikilsin();
@@ -86,12 +92,33 @@ public class Islem {
     }
 
     private void pGonder() {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("para göndereceğiniz iban ı giriniz : ");
+        String iban= scan.nextLine();
+        System.out.println("göndereceğiniz tutarı giriniz : ");
+        int gonderilen= scan.nextInt();
+
+        if (!(gonderilen>musterim.getBakiye())){
+            if (iban.startsWith("TR")&& iban.length()==4){
+                musterim.setBakiye(musterim.getBakiye()-gonderilen);
+                System.out.println("hesabınızdan "+gonderilen+" tl gönderilmiştir.Güncel bakiye : "+musterim.getBakiye());
+            }else {
+                System.out.println("geçersiz iban");
+                menuu();
+            }
+        }else{
+        System.out.println("yetersiz bakiye !");
+        pGonder();}
+
     }
 
     private void sifreDegistr() {
+        
+
     }
 
     private void cikilsin() {
+        System.out.println("yine bekleriz ... ");
     }
 
 

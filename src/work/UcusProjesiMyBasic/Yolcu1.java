@@ -1,4 +1,4 @@
-package work.UcusProjesiMy;
+package work.UcusProjesiMyBasic;
 
 public class Yolcu1 {
     String city;

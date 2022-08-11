@@ -1,6 +1,5 @@
-package work.UcusProjesiMy;
+package work.UcusProjesiMyBasic;
 
-import javax.crypto.Cipher;
 import java.util.Scanner;
 
 public class JavaAirlines {

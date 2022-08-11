@@ -6,3 +6,4 @@ public class Runner {
        obj.kartNoSifreAl();
     }
 }
+// Kalip musterim = new Kalip("sümeyye güler", "123", "asd", 1000);
