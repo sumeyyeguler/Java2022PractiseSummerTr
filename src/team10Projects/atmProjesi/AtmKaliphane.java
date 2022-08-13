@@ -1,4 +1,4 @@
-package team10Projects.atmProjesi;
+/*package team10Projects.atmProjesi;
 
 public class AtmKaliphane {
 
@@ -57,3 +57,6 @@ public class AtmKaliphane {
                 '}';
     }
 }
+
+
+ */

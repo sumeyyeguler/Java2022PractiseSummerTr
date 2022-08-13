@@ -1,4 +1,4 @@
-package team10Projects.atmProjesi;
+/*package team10Projects.atmProjesi;
 
 import java.util.Scanner;
 
@@ -139,3 +139,5 @@ public class AtmIslem {
         System.out.println("güle güle");
     }
 }
+
+ */

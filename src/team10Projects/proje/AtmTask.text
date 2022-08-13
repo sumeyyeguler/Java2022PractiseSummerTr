@@ -1,0 +1,13 @@
+         Şehir Rehberi
+
+1 - gezilecek yerler
+2 - konaklama
+3 - restaurant
+4 - ulaşım olanakları
+5 - avm ler
+6 - hastane
+7 - konserler/sinema/tiyatro
+8 - iletişim
+
+Map.put(1,"gezilecek yer, galata, 25, otobüs");
+Map.put(2,"konaklama, , 25, otobüs

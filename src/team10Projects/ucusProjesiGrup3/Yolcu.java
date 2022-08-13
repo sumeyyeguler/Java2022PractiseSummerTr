@@ -14,8 +14,8 @@ public class Yolcu {
     }
 
     public Yolcu(String isimSoyisim, String sehir, String biletTuru, int yas) {
-        this.isimSoyisim = isimSoyisim;
-        this.sehir = sehir;
+       setIsimSoyisim(isimSoyisim);
+       setSehir(sehir);
         this.biletTuru = biletTuru;
         this.yas = yas;
         setFlightNo();
@@ -27,7 +27,7 @@ public class Yolcu {
     }
 
     public void setIsimSoyisim(String isimSoyisim) {//kullanmadığımız için bu methodu silebiliriz
-        this.isimSoyisim = isimSoyisim;
+        this.isimSoyisim = isimSoyisim.toUpperCase();
     }
 
     public String getSehir() {
@@ -35,12 +35,12 @@ public class Yolcu {
     }
 
     public void setSehir(String sehir) {//kullanmadığımız için bu methodu silebiliriz
-        this.sehir = sehir;
+        this.sehir = sehir.toUpperCase();
     }
 
     public String getFlightNo() {//kullanmadığımız için bu methodu silebiliriz
         return flightNo;
-    }
+    }//kullanmadığımız için bu methodu silebiliriz
 
     public void setFlightNo() {
         this.flightNo = ""+ LocalDate.now().getYear()+ LocalTime.now().getHour();
@@ -48,7 +48,7 @@ public class Yolcu {
 
     public String getKapiNo() {//kullanmadığımız için bu methodu silebiliriz
         return kapiNo;
-    }
+    }//kullanmadığımız için bu methodu silebiliriz
 
     public void setKapiNo() {
         Random rnd=new Random();
@@ -74,11 +74,11 @@ public class Yolcu {
     @Override
     public String toString() {
         return
-                "\nisimSoyisim=" + isimSoyisim +
-                "\nsehir=" + sehir +
-                "\nflightNo=" + flightNo +
-                "\nkapiNo=" + kapiNo +
-                "\nbiletTuru=" + biletTuru +
-                "\nyas=" + yas;
+                "\nİsim Soyisim   :" + isimSoyisim +
+                "\nYaş            :" + yas+
+                "\nSehir          :" + sehir +
+                "\nFlight Number  :" + flightNo +
+                "\nGate Number    :" + kapiNo +
+                "\nBilet Türü     :" + biletTuru ;
     }
 }

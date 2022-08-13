@@ -1,4 +1,6 @@
+/*
 package team10Projects.atmProjesi;
+
 
 public class AtmRunner {
     public static void main(String[] args) {
@@ -7,3 +9,5 @@ public class AtmRunner {
     }
 }
 //1234567891234567
+
+ */
